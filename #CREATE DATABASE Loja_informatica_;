@@ -1,0 +1,16 @@
+#CREATE DATABASE Loja_informatica_;
+use Loja_informatica;
+create TABLE IF NOT EXISTS produtos(
+  id serial PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  categoria VARCHAR(20) NOT NULL,
+  preco DECIMAL(5,2) NOT NULL,
+  quantidade INT NOT NULL
+);
+INSERT INTO produtos(nome, categoria, preco, quantidade) VALUES
+('Teclado Mecânico', 'periféricos', 180.00, 15),
+('Mouse Gamer', 'periféricos', 95.00, 20),
+('SSD 480GB', 'armazenamento', '250.00', 8),
+('Memória RAM 8GB', 'hardware', '160.00', 12),
+('Monitor 24 polegadas', 'monitores', 850.00, 15);
+select * FROM produtos
